@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<title>onderwijsblokken</title>
+<style type="text/css">
+  body { font-family:calibri,verdana,sans-serif; height:99vh; width:99vw; overflow:hidden; }
+  header { height:15vh; width:90vw; }
+  header h1, header h2 { margin:0; }
+
+  #main { display:table; width:90vw; height:80vh; border-collapse:collapse;  }
+  #main div.row { display:table-row; }
+  #main div.row:nth-child(even) { background-color:lightblue; }
+  #main div.blok { display:table-cell; border-left:dotted blue 1px;border-bottom:dotted blue 1px; vertical-align:middle; padding:1vw; width:20%; max-width:20vw;} 
+  #main div.jaar-header { height:20wh; border-right:solid blue 1px; border-left:none; }
+  #main div.header, #main div.jaar-header { font-weight:bold; text-align:center; font-size:1.5rem; color:darkblue;}
+  #main div.header { height: 1vh; border-bottom:solid blue 1px; }
+
+</style>
+
+</head>
+
+<body>
+<header>
+  <a href="index.html"><img src="imgs/bart_klein.png" style="float:left; height:15vh; padding-right:10px;"/></a>
+  <h1>Curriculum HBO-ICT</h1>
+  <h2>Major software engineering</h2>
+  <p>In het onderstaand overzicht worden de vakken weergegeven waar ik momenteel bij betrokken ben.</p>
+</header>
+
+<div id="main">
+  <div class="row blok-header">
+    <div class="blok header">jaar</div>
+    <div class="blok header">blok1</div>
+    <div class="blok header">blok2</div>
+    <div class="blok header">blok3</div>
+    <div class="blok header">blok4</div>
+  </div> 
+  
+  <div class="jaar row">
+    <div class="blok jaar-header">1</div>
+    <div class="blok">web programming (databases, php)</div>
+    <div class="blok">Java</div>
+    <div class="blok">Interaction Design, Human Computer Interaction</div>
+    <div class="blok">Databases</div>
+  </div> 
+  
+  <div class="jaar row">
+    <div class="blok jaar-header">2</div>
+    <div class="blok">Python</div>
+    <div class="blok">–</div>
+    <div class="blok">Design Patterns, Algoritmen en datastructuren</div>
+    <div class="blok">Web programming, python, javascript. nosql</div>
+  </div> 
+  
+  <div class="jaar row">
+    <div class="blok jaar-header">3</div>
+    <div class="blok">Stagebegeleiding</div>
+    <div class="blok">Stagebegeleiding</div>
+    <div class="blok">Minor Art & Technology</div>
+    <div class="blok">Minor Art & Technology</div>
+  </div> 
+  
+  <div class="jaar row">
+    <div class="blok jaar-header">4</div>
+    <div class="blok">Web programming, JavaScript (Angular, React), projectmanagement, Software kwaliteit</div>
+    <div class="blok">CI/CD. Machine Learning, </div>
+    <div class="blok">afstudeerbegeleiding</div>
+    <div class="blok">afstudeerbegeleiding</div>
+  </div> 
+
+</body></html>

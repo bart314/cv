@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<title>Bart Barnard – Curriculum Vitae</title>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/photo_data.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+   $(document).scroll(function() { 
+     $("header").css("background-position","50% " + ($(this).scrollTop() / 2) + "px");
+   });
+
+  $("#overlay, #photo-main, #photo").click(function() { 
+     $("#main-container").css({'visibility':'hidden', 'z-index':-9 });
+     $("#photo").attr('src','');
+   });
+
+   $("a.photo").click(function() {
+     console.log('hier');
+     show_image($(this).attr('id'));
+     return false;
+   });
+
+   $("#left, #right").click(function(e) { e.stopPropagation(); }); 
+});
+
+function show_image(what) { 
+    var data = photo_data[what];
+
+    file = 'imgs/' + data.foto;
+    html = '<h2>' +data.titel+'</h2>';
+    $("#photo").attr('src', file);
+    $("#photo-data").html(html);
+
+    $("#comments").html(data.beschrijving); 
+    $("#main-container").css({'visibility':'visible', 'z-index':9});
+  }
+
+</script>
+
+
+<style type="text/css">
+  body { font-family:Calibri, Verdana, sans-serif; margin:0; padding:0; }
+
+  div.text { line-height:1.5; color:#333; width:80vw;padding-left:5vw; }
+  div.table { display:table; padding-top:3vh; } 
+  div.row { display:table-row; }
+  
+  p.cell, img.cell { display:table-cell; vertical-align:top; }
+  span.jaren { font-weight:bold; text-decoration:underline; }
+  
+  a { text-decoration:none; color:#f47500; }
+  a:hover { border-bottom:solid 1px #f47500; border-top:solid 1px #f47500; }
+  a.photo:hover { border-bottom:dotted 1px #f47500; border-top:none; }
+
+  header { width:100vw; height:100vh;  background:url('imgs/bart_start.png') no-repeat center center; background-size:cover; background-position:50% 0; text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; margin:0; margin-bottom:2vh; padding:0;top:0; }
+  header div.middle { position:relative; top:50%; transform:translateY(-50%); }
+  footer { text-align:center; }
+  footer > p { text-align:left; padding-left:2vw; font-size:0.7rem; }
+
+
+
+  #social { position:absolute; bottom:3vh; right:3vw; max-height:50px; }
+  img.icon { max-height:36px; max-width:36px; }
+  img.left { float:left; padding:10px; }
+
+
+    #main-container { visibility: hidden; z-index:-9; }
+    #overlay { position:fixed; top:0; left:0; height:100vh; width:100vw; background:rgba(0,0,0,.7); text-align:center;  }
+
+    #photo-main { position:fixed; top:0; left:0; width:99vw; height:99vh; display:flex; align-items:center; justify-content:center; } 
+    #photo-container { width:90vw; height:90vh; }
+    #photo-data { height:10%; }
+    #photo { width:100%; overflow:hidden; cursor:pointer; } 
+
+    
+    #comments {  height: 70%; max-height:80%; overflow:scroll; margin:4% 0; padding:1%; }
+    #footer { height:30%; font-size:small; font-style:italic;  }
+
+
+
+  @media screen and (orientation:landscape) {
+    header h1 {  margin-left:60vw; font-size:4rem;  color:white; }
+    img.sized-w { width:15vw; padding-left:1vw; }
+    #photo-data > h2 { margin-bottom:0; }
+
+
+    #left { width:70%; height:100%; background:black; float:left; display:flex; align-items:center; overflow:hidden; }
+    #right { width:29%; padding-left:1%; height:100%; max-height:100%; float:left;  background-color:white; }
+  }
+
+  @media screen and (orientation:portrait) { 
+    header h1 { font-size:2rem;  color:white; }
+    img.left { width:20vw; }
+    img.sized-w { display:none; }
+    #photo-data { padding-bottom:20%; padding-top:0; margin-top:0; }
+    #left { width:100%; height:50%; background:black; display:flex; align-items:center; overflow:hidden; }
+    #right { width:100%; height:50%; max-height:100%;  background-color:white; overflow:scroll; }
+    footer > img { width:90vw; }
+  }
+
+
+
+</style>
+</head>
+
+<body>
+<header>
+  <div class="middle">
+    <h1>Bart Barnard</h1>
+    <h1>Curriculum Vitae</h1>
+  </div>
+  <div id="social">
+    <a href="https://github.com/bart314" title="github"><img src="imgs/github.png" class="icon"/></a>
+    <a href="mailto:b.barnard@pl.hanze.nl" title="e-mail"><img src="imgs/mail.png" class="icon"/></a>
+    <a href="https://www.linkedin.com/in/bbarnard/" title="linkedin"><img src="imgs/linkedin.png" class="icon"/></a>
+    <a href="https://www.facebook.com/bart.barnard.10" title="facebook"><img src="imgs/facebook.png" class="icon"/></a>
+  </div>
+</header>
+
+<div class="text" >
+  Geboortedatum: 27 november 1970<br/>
+  Adres: Waterhoenstraat 19, 8601 XT, Sneek<br/>
+  Telefoon: 06 2509 3817<br/>
+  E-mail: <a href="mailto:b.barnard@pl.hanze.nl">b.barnard@pl.hanze.nl</a><br/>
+  Sites: <a href="https://www.bartbarnard.nl/">bartbarnard.nl</a>, <a href="http://www.mandarin.nl">mandarin.nl</a><br/>
+  <a href="https://github.com/bart314">Github</a> | <a href="https://www.linkedin.com/in/bbarnard/">LinkedIn</a> | <a href="https://www.facebook.com/bart.barnard.10">Facebook</a><br/> 
+</div>
+
+<div class="text">
+  <h1>Algemeen</h1>
+  <p>Mijn interesse ligt op het snijvlak van techniek, kunst, en filosofie. Vanuit die basis houd ik technologische ontwikkelingen bij, reflecteer ik op de (maatschappelijke) consequenties hiervan, die ik uiteindelijk in de geschiedenis en tradities probeer te duiden. Ik heb een creatieve geest die open staat voor nieuwe inzichten, ideeën of concepten. Ik probeer mezelf continu zowel te verbreden als te verdiepen, vanuit de stelregel dat ik elke dag iets nieuws moet leren.</p>
+<p>Omdat ik een grote passie heb voor kennis en kennisoverdracht <a href="#werk">werk</a> ik sinds tien jaar volledig in het onderwijs. Maar ook daarbuiten <a href="https://www.bartbarnard.nl/blog/?page_id=350">geef ik graag en vaak lezingen en presentaties</a>. Vanuit deze interesse en passie heb ik altijd meerdere projecten lopen waar ik bijna dagelijks aan werk en waarin ik nieuwe methoden en technieken uitprobeer. De werkzaamheden hierin lopen uiteen van het uitproberen van <a href="http://mandarin.nl/trump/">een javascript-library voor het maken van geluid</a>, via het schrijven van <a href="https://www.bartbarnard.nl/blog/?p=792">een complexe stored procedure</a> tot aan <a href="https://www.bartbarnard.nl/blog/?p=599">complexe java-architecturen</a>. Kennisoverdracht hierover doe ik via <a href="https://www.bartbarnard.nl/blog/?page_id=625">lab-reports</a>.</p> 
+
+<p>Ik heb een sterke mening over hoe de wereld er uit zou moeten zien en welke stappen gezet moeten worden om dat te bereiken. Ik deel dat te pas en te onpas via ingezonden brieven en opiniestukken in <a href="https://www.bartbarnard.nl/blog/?page_id=431">diverse regionale en landelijke dagbladen</a>. Indachtig de uitspraak van <a href="https://en.wikipedia.org/wiki/Friedrich_Wilhelm_Joseph_Schelling">Schelling</a> uit 1802 verlang ik dat niets in het universum teneergedrukt, ingeperkt of ondergeschikt is, en eis ik voor elk ding een bijzonder en vrij bestaan.</p>
+
+</div>
+
+<div class="text">
+  <h1 id="werk">Huidig werk</h1>
+  <img src="imgs/hanze.png" class="left"/>
+  <p>Momenteel werk ik bij het <a href="https://www.hanze.nl/nld/onderwijs/techniek/instituut-voor-communicatie-media--it">Instituut voor Communicatie, Media & IT</a> van de <a href="https://www.hanze.nl/nld">Hanzehogeschool Groningen</a>. Als <a href="imgs/hogeschooldocent.pdf">hogeschooldocent</a> ben ik verantwoordelijk voor de opleiding Software Engineering; dit betekent zowel het actueel houden van bestaande onderdelen als het ontwikkelen van volledig nieuwe thema's. Ik zorg er dan ook voor dat ik de ontwikkelingen binnen het vakgebied altijd nauwgezet volg, en onderhoud goede banden met ICT-bedrijven en -organisaties in het noorden. Behalve dit meer operationele werk <a id="2" class="photo" title="Klik om een foto te zien" href="#">geef ik ook les</a> in alle jaren van de opleiding: een lijst van alle vakken waar ik bij betrokken ben <a href="blokken.html">staat online</a>.
+  </p>
+
+
+
+  <p>Een halve dag in de week werk ik aan <a href="http://portal.academieminerva.nl/">Minerva Kunstacademie</a>. Hier verzorg ik onderwijs op het grensvlak van kunst en techniek, waarbij ik samen met een collega en een groep studenten een project definieer en uitvoer; projecten die in de publieke ruimte plaatsvinden en mensen verbazen en doen nadenken. Verder ben ik hier verantwoordelijk voor de uitvoering van <a href="https://www.hanze.nl/eng/education/art/minerva-art-academy/programmes/minor/minor-art-technology">de minor Art & Technology</a>, die elk jaar in het tweede semester wordt gegeven. Een mooi promotiefilmpje hiervoor is <a href="https://vimeo.com/99715029">op Vimeo te vinden</a>, en via <a href="http://www.mandarin.nl/minor/">deze link is het portfolio te benaderen</a>. Deze minor is ontstaan vanuit een intensieve samenwerking met het <a href="https://www.hanze.nl/nld/onderzoek/kenniscentra/kenniscentrum-kunst-en-samenleving">Kenniscentrum Kunst en Samenleving</a>.</p>
+
+  <p>Sinds 2011 ben ik onder begeleiding van <a href="https://nl.wikipedia.org/wiki/Ren%C3%A9_Boomkens">prof.dr. René Boomkens</a> en <a href="https://nl.wikipedia.org/wiki/Gerard_Visser">dr. Gerard Visser</a> bezig met een promotie-onderzoek. Uitgangspunt hierbij is dat kunst en techniek in toenemende mate weer naar hun oorspronkelijke eenheid terugkeren, na een periode van vijf eeuwen waarin deze domeinen van elkaar gescheiden zijn geweest. Hoewel de dissertatie, die het uiteindelijke resultaat van dit werk moet worden, nog steeds niet klaar is, heb ik wel al vrij veel voorbereidend werk hierover <a href="https://www.bartbarnard.nl/blog/">in de vorm van blogs gepubliceerd</a>. De planning is dat het werk rond september 2018 in eerste vorm gereed is. Vanuit deze rol ben ik ook betrokken bij de <a href="http://asca.uva.nl/content/research-groups/art--politics/art--politics.html">Onderzoeksgroep Art and Politics</a> van de <a href="http://uva.nl">Universiteit van Amsterdam</a>.</p>
+</div>
+
+<div class="text">
+  <h1>Eerdere werkervaring</h1>
+
+  <div class="table"><div class="row">
+  <p class="cell"><span class="jaren">2006 – 2008: ontwikkelaar bij Cope IPS (Leiden):</span> Cope is een bedijf dat online enquête-software schrijft en onderhoudt, en statistische analyses uitvoert. Hun klanten bevinden zich zowel in het publieke als in het commerciële domein (bijvoorbeeld <a href="https://www.kempen.com/">Kempen</a> of <a href="http://www.twynstragudde.nl/">Twynstra Gudde</a>, maar ook de <a href="http://www.kinderbescherming.nl">Raad voor de Kinderbescherming</a> of <a href="https://www.utwente.nl/">de Universiteit Twente</a>). Hier was ik verantwoordelijk voor onderhoud en uitbreiding van de code-base (php/mysql) en het opzetten van nieuwe vragenlijsten op basis van specifieke klantwensen (XSLT en een DSL). Ook onderhield ik hier diverse klantcontacten. Cope is inmiddels opgegaan in <a href="https://www.dimins.com/nl/">Dimensional Insight</a></p>
+  <p class="cell"><img src="imgs/dimins.png" class="sized-w"/></p>
+  </div></div>
+
+  <div class="table"><div class="row">
+  <p class="cell"><span class="jaren">2004 – 2006: software-analyst bij de</span> <a href="https://sig.eu">Software Improvement Group (Amsterdam)</a>: Bij de SIG worden grote complexe informaticasystemen doorgelicht. Te denken valt hierbij aan onderhoudbaarheid en uitbreidbaarheid van de programmacode. Tot hun klanten rekenen zij grote bedrijven met een complexe code-base, zoals <a href="https://duo.nl/particulier/">DUO</a>, <a href="https://www.cjib.nl/">CJIB</a>, en <a href="https://www.sig.eu/our-clients/">vele anderen</a>. Dit was een behoorlijk technische omgeving waar ik me met name bezig heb gehouden met de interpretatie van de gegevens die uit de analyses naar voren kwamen en het schrijven van technische rapportages hierover.</p>
+  <p class="table"><img src="imgs/sig.jpeg" class="sized-w"/></p>
+  </div></div>
+
+
+  <div class="table"><div class="row">
+  <p class="cell"><span class="jaren">2008 – 2011: part-time docent aan de Professional School of the Arts Utrecht:</span> De PSAU was een samenwerkingsverband tussen de UU en de HKU, dat helaas te kort heeft bestaan. Onder mijn begeleiding is een redelijk aantal studenten aan de PSAU afgestudeerd, waaronder drie cum laude. Onderwerpen van de theses waren bijvoorbeeld ‘Het aura van het digitale kunstwerk’, ‘De rol van het literaire tijdschrift in de moderne maatschappij’ of ‘De theoriegeladenheid van kijken naar een theatervoorstelling’.</p>
+  <div class="cell"></div>
+  </div></div>
+
+
+  <div class="table"><div class="row">
+  <p class="cell"><span class="jaren">2001 – 2008: part-time docent Interaction Design aan de</span> <a href="http://www.hku.nl">Hogeschool voor de Kunsten Utrecht</a>: Binnen de opleiding Interaction Design was ik onder andere verantwoordelijk voor het tweedejaars vak waarin de noodzaak van goed kunnen werken met software centraal stond. Aan de hand van meer traditionele theatertheorie werden hierin verschillende programma’s en hun werking geanalyseerd.
+  </p>
+  <p class="cell"><img src="imgs/hku.png" class="sized-w"/></p>
+  </div></div>
+  <p>Vóór 2004 heb ik als programmeur bij diverse internet- en multimedia-bureaus gewerkt.</p>
+</div>
+
+<div class="text">
+  <h1>Opleidingen en certificaten</h1>
+  <ul>
+    <li>Certificaat Machine Learning (2018, <a href="https://www.coursera.org/account/accomplishments/verify/VD2D984ARFBM">Coursera</a>)</li>
+    <li>Basiskwalificatie Examinatoren (2016, <a href="http://www.hanze.nl">Hanzehogeschool Groningen</a>)</li>
+    <li>Kwalificatie Didactische Vaardigheden (2007, <a href="http://www.hku.nl/">Hogeschool voor de Kunsten Utrecht</a>)</li>
+    <li>Italiaans CEFR B2 (2006, <a href="http://www.dilit.it/it/">Dilit International House, Rome</a>)</li> 
+    <li>Doctoraal Wijsbegeerte (1996,<a href="https://www.universiteitleiden.nl/">Universiteit Leiden</a>)</li>
+  </ul>
+</div>
+
+
+
+<div class="text">
+  <h1>Hobbies en zo</h1>
+  <ul>
+    <li>Talen (ik spreek en lees Nederlands, Engels, Duits, Italiaans en Frans; momenteel ben ik bezig met 中文)</li>
+    <li>Pianospelen (Bach, Chopin, Rachmaninov, ...)</li>
+    <li>Sporten (<a href="#" id="4" class="photo" titel="Klik voor een foto">hardlopen</a>, <a href="#" class="photo" id="3" title="Klik voor een foto">fietsen</a>, fitnessen, zwemmen; vroeger heb ik ook <a href="http://mandarin.nl/div/domtoernooi.html">redelijk intensief geschermd</a>.)</li>
+    <li>Fotograferen</li> 
+    <li>Koken</li> 
+  </ul>
+</div>
+
+<footer>
+  <img src="imgs/maya-text.jpg" title="BALATA: 12 baktun, 17 katun, 17 tun,5 uinal, 15 k'in, 5 Men, 8 Keh, G7; Siyaj(a) Nahalahaw K'ahk'in"/>
+ <p>laatste wijziging: 8 juli  2018</p>
+</footer>
+
+
+<div id="main-container">
+  <div id="overlay"> </div>
+
+  <div id="photo-main">
+    <div id="photo-container">
+      <div id="left"> <img id="photo"/> </div>
+
+      <div id="right">
+        <div id="photo-data">
+          <h2>Dit is de mooie titel die wat langer is dan één regel</h2>
+          <p>Opmerkingen over deze foto.</p>
+        </div>
+        <div id="comments">
+           overflow<br/> overflow<br/>
+        </div>
+
+        <div id="footer"></div> 
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+</body></html>
