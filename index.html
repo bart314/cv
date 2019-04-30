@@ -11,11 +11,11 @@
 <script type="text/javascript" src="js/photo_data.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-   $(document).scroll(function() { 
+   $(document).scroll(function() {
      $("header").css("background-position","50% " + ($(this).scrollTop() / 2) + "px");
    });
 
-  $("#overlay, #photo-main, #photo").click(function() { 
+  $("#overlay, #photo-main, #photo").click(function() {
      $("#main-container").css({'visibility':'hidden', 'z-index':-9 });
      $("#photo").attr('src','');
    });
@@ -26,10 +26,10 @@ $(document).ready(function() {
      return false;
    });
 
-   $("#left, #right").click(function(e) { e.stopPropagation(); }); 
+   $("#left, #right").click(function(e) { e.stopPropagation(); });
 });
 
-function show_image(what) { 
+function show_image(what) {
     var data = photo_data[what];
 
     file = 'imgs/' + data.foto;
@@ -37,7 +37,7 @@ function show_image(what) {
     $("#photo").attr('src', file);
     $("#photo-data").html(html);
 
-    $("#comments").html(data.beschrijving); 
+    $("#comments").html(data.beschrijving);
     $("#main-container").css({'visibility':'visible', 'z-index':9});
   }
 
@@ -48,12 +48,12 @@ function show_image(what) {
   body { font-family:Calibri, Verdana, sans-serif; margin:0; padding:0; }
 
   div.text { line-height:1.5; color:#333; width:80vw;padding-left:5vw; }
-  div.table { display:table; padding-top:3vh; } 
+  div.table { display:table; padding-top:3vh; }
   div.row { display:table-row; }
-  
+
   p.cell, img.cell { display:table-cell; vertical-align:top; }
   span.jaren { font-weight:bold; text-decoration:underline; }
-  
+
   a { text-decoration:none; color:#f47500; }
   a:hover { border-bottom:solid 1px #f47500; border-top:solid 1px #f47500; }
   a.photo:hover { border-bottom:dotted 1px #f47500; border-top:none; }
@@ -73,12 +73,12 @@ function show_image(what) {
     #main-container { visibility: hidden; z-index:-9; }
     #overlay { position:fixed; top:0; left:0; height:100vh; width:100vw; background:rgba(0,0,0,.7); text-align:center;  }
 
-    #photo-main { position:fixed; top:0; left:0; width:99vw; height:99vh; display:flex; align-items:center; justify-content:center; } 
+    #photo-main { position:fixed; top:0; left:0; width:99vw; height:99vh; display:flex; align-items:center; justify-content:center; }
     #photo-container { width:90vw; height:90vh; }
     #photo-data { height:10%; }
-    #photo { width:100%; overflow:hidden; cursor:pointer; } 
+    #photo { height:100%; width:auto; overflow:hidden; cursor:pointer; }
 
-    
+
     #comments {  height: 70%; max-height:80%; overflow:scroll; margin:4% 0; padding:1%; }
     #footer { height:30%; font-size:small; font-style:italic;  }
 
@@ -94,7 +94,7 @@ function show_image(what) {
     #right { width:29%; padding-left:1%; height:100%; max-height:100%; float:left;  background-color:white; }
   }
 
-  @media screen and (orientation:portrait) { 
+  @media screen and (orientation:portrait) {
     header h1 { font-size:2rem;  color:white; }
     img.left { width:20vw; }
     img.sized-w { display:none; }
@@ -126,17 +126,17 @@ function show_image(what) {
 
 <div class="text" >
   Geboortedatum: 27 november 1970<br/>
-  Adres: Waterhoenstraat 19, 8601 XT, Sneek<br/>
+  Adres: Maluslaan 116, 9741 LP, Groningen<br/>
   Telefoon: 06 2509 3817<br/>
   E-mail: <a href="mailto:b.barnard@pl.hanze.nl">b.barnard@pl.hanze.nl</a><br/>
   Sites: <a href="https://www.bartbarnard.nl/">bartbarnard.nl</a>, <a href="http://www.mandarin.nl">mandarin.nl</a><br/>
-  <a href="https://github.com/bart314">Github</a> | <a href="https://www.linkedin.com/in/bbarnard/">LinkedIn</a> | <a href="https://www.facebook.com/bart.barnard.10">Facebook</a><br/> 
+  <a href="https://github.com/bart314">Github</a> | <a href="https://www.linkedin.com/in/bbarnard/">LinkedIn</a> | <a href="https://www.facebook.com/bart.barnard.10">Facebook</a><br/>
 </div>
 
 <div class="text">
   <h1>Algemeen</h1>
   <p>Mijn interesse ligt op het snijvlak van techniek, kunst, en filosofie. Vanuit die basis houd ik technologische ontwikkelingen bij, reflecteer ik op de (maatschappelijke) consequenties hiervan, die ik uiteindelijk in de geschiedenis en tradities probeer te duiden. Ik heb een creatieve geest die open staat voor nieuwe inzichten, ideeën of concepten. Ik probeer mezelf continu zowel te verbreden als te verdiepen, vanuit de stelregel dat ik elke dag iets nieuws moet leren.</p>
-<p>Omdat ik een grote passie heb voor kennis en kennisoverdracht <a href="#werk">werk</a> ik sinds tien jaar volledig in het onderwijs. Maar ook daarbuiten <a href="https://www.bartbarnard.nl/blog/?page_id=350">geef ik graag en vaak lezingen en presentaties</a>. Vanuit deze interesse en passie heb ik altijd meerdere projecten lopen waar ik bijna dagelijks aan werk en waarin ik nieuwe methoden en technieken uitprobeer. De werkzaamheden hierin lopen uiteen van het uitproberen van <a href="http://mandarin.nl/trump/">een javascript-library voor het maken van geluid</a>, via het schrijven van <a href="https://www.bartbarnard.nl/blog/?p=792">een complexe stored procedure</a> tot aan <a href="https://www.bartbarnard.nl/blog/?p=599">complexe java-architecturen</a>. Kennisoverdracht hierover doe ik via <a href="https://www.bartbarnard.nl/blog/?page_id=625">lab-reports</a>.</p> 
+<p>Omdat ik een grote passie heb voor kennis en kennisoverdracht <a href="#werk">werk</a> ik sinds tien jaar volledig in het onderwijs. Maar ook daarbuiten <a href="https://www.bartbarnard.nl/blog/?page_id=350">geef ik graag en vaak lezingen en presentaties</a>. Vanuit deze interesse en passie heb ik altijd meerdere projecten lopen waar ik bijna dagelijks aan werk en waarin ik nieuwe methoden en technieken uitprobeer. De werkzaamheden hierin lopen uiteen van het uitproberen van <a href="http://mandarin.nl/trump/">een javascript-library voor het maken van geluid</a>, via het schrijven van <a href="https://www.bartbarnard.nl/blog/?p=792">een complexe stored procedure</a> tot aan <a href="https://www.bartbarnard.nl/blog/?p=599">complexe java-architecturen</a>. Kennisoverdracht hierover doe ik via <a href="https://www.bartbarnard.nl/blog/?page_id=625">lab-reports</a>.</p>
 
 <p>Ik heb een sterke mening over hoe de wereld er uit zou moeten zien en welke stappen gezet moeten worden om dat te bereiken. Ik deel dat te pas en te onpas via ingezonden brieven en opiniestukken in <a href="https://www.bartbarnard.nl/blog/?page_id=431">diverse regionale en landelijke dagbladen</a>. Indachtig de uitspraak van <a href="https://en.wikipedia.org/wiki/Friedrich_Wilhelm_Joseph_Schelling">Schelling</a> uit 1802 verlang ik dat niets in het universum teneergedrukt, ingeperkt of ondergeschikt is, en eis ik voor elk ding een bijzonder en vrij bestaan.</p>
 
@@ -147,13 +147,8 @@ function show_image(what) {
 <div class="text">
   <h1 id="werk">Huidig werk</h1>
   <img src="imgs/hanze.png" class="left"/>
-  <p>Momenteel werk ik bij het <a href="https://www.hanze.nl/nld/onderwijs/techniek/instituut-voor-communicatie-media--it">Instituut voor Communicatie, Media & IT</a> van de <a href="https://www.hanze.nl/nld">Hanzehogeschool Groningen</a>. Als <a href="imgs/hogeschooldocent.pdf">hogeschooldocent</a> ben ik verantwoordelijk voor de opleiding Software Engineering; dit betekent zowel het actueel houden van bestaande onderdelen als het ontwikkelen van volledig nieuwe thema's. Ik zorg er dan ook voor dat ik de ontwikkelingen binnen het vakgebied altijd nauwgezet volg, en onderhoud goede banden met ICT-bedrijven en -organisaties in het noorden. Behalve dit meer operationele werk <a id="2" class="photo" title="Klik om een foto te zien" href="#">geef ik ook les</a> in alle jaren van de opleiding: een lijst van alle vakken waar ik bij betrokken ben <a href="blokken.html">staat online</a>.
+  <p>Momenteel werk ik bij het <a href="https://www.hanze.nl/nld/onderwijs/techniek/instituut-voor-communicatie-media--it">Instituut voor Communicatie, Media & IT</a> van de <a href="https://www.hanze.nl/nld">Hanzehogeschool Groningen</a>. Als docent <a id="2" class="photo" title="Klik om een foto te zien" href="#">geef ik les</a> aan alle jaren van de opleiding; dat varieert van databases of eenvoudige programmeervakken in het eerste jaar, via Python en Java in het tweeede jaar tot Machine Learning in het vierde. Ik hou de ontwikkelingen binnen het vakgebied altijd nauwgezet bij, en onderhoud goede banden met ICT-bedrijven en -organisaties in het noorden. Een lijst van alle vakken waar ik bij betrokken ben <a href="blokken.html">staat online</a>.
   </p>
-
-
-
-  <p>Een halve dag in de week werk ik aan <a href="http://portal.academieminerva.nl/">Minerva Kunstacademie</a>. Hier verzorg ik onderwijs op het grensvlak van kunst en techniek, waarbij ik samen met een collega en een groep studenten een project definieer en uitvoer; projecten die in de publieke ruimte plaatsvinden en mensen verbazen en doen nadenken. Verder ben ik hier verantwoordelijk voor de uitvoering van <a href="https://www.hanze.nl/eng/education/art/minerva-art-academy/programmes/minor/minor-art-technology">de minor Art & Technology</a>, die elk jaar in het tweede semester wordt gegeven. Een mooi promotiefilmpje hiervoor is <a href="https://vimeo.com/99715029">op Vimeo te vinden</a>, en via <a href="http://www.mandarin.nl/minor/">deze link is het portfolio te benaderen</a>. Deze minor is ontstaan vanuit een intensieve samenwerking met het <a href="https://www.hanze.nl/nld/onderzoek/kenniscentra/kenniscentrum-kunst-en-samenleving">Kenniscentrum Kunst en Samenleving</a>.</p>
-
 </div>
 
 <div class="text">
@@ -190,7 +185,7 @@ function show_image(what) {
     <li>Certificaat Machine Learning (2018, <a href="https://www.coursera.org/account/accomplishments/verify/VD2D984ARFBM">Coursera</a>)</li>
     <li>Basiskwalificatie Examinatoren (2016, <a href="http://www.hanze.nl">Hanzehogeschool Groningen</a>)</li>
     <li>Kwalificatie Didactische Vaardigheden (2007, <a href="http://www.hku.nl/">Hogeschool voor de Kunsten Utrecht</a>)</li>
-    <li>Italiaans CEFR B2 (2006, <a href="http://www.dilit.it/it/">Dilit International House, Rome</a>)</li> 
+    <li>Italiaans CEFR B2 (2006, <a href="http://www.dilit.it/it/">Dilit International House, Rome</a>)</li>
     <li>Doctoraal Wijsbegeerte (1996,<a href="https://www.universiteitleiden.nl/">Universiteit Leiden</a>)</li>
   </ul>
 </div>
@@ -201,16 +196,16 @@ function show_image(what) {
   <h1>Hobbies en zo</h1>
   <ul>
     <li>Talen (ik spreek en lees Nederlands, Engels, Duits, Italiaans en Frans; momenteel ben ik bezig met 中文)</li>
-    <li>Pianospelen (Bach, Chopin, Rachmaninov, ...)</li>
+    <li>Pianospelen (Bach, Chopin, Rachmaninov, Debussy, ...)</li>
     <li>Sporten (<a href="#" id="4" class="photo" titel="Klik voor een foto">hardlopen</a>, <a href="#" class="photo" id="3" title="Klik voor een foto">fietsen</a>, fitnessen, zwemmen; vroeger heb ik ook <a href="http://mandarin.nl/div/domtoernooi.html">redelijk intensief geschermd</a>.)</li>
-    <li>Fotograferen</li> 
-    <li>Koken</li> 
+    <li>Fotograferen</li>
+    <li>Koken</li>
   </ul>
 </div>
 
 <footer>
   <img src="imgs/maya-text.jpg" title="BALATA: 12 baktun, 17 katun, 17 tun,5 uinal, 15 k'in, 5 Men, 8 Keh, G7; Siyaj(a) Nahalahaw K'ahk'in"/>
- <p>laatste wijziging: 12 augustus 2018 <br/>
+ <p>laatste wijziging: 30 april 2019 <br/>
   Bekijk de <a href="https://github.com/bart314/cv">repo op github</a>.</p>
 </footer>
 
@@ -231,8 +226,8 @@ function show_image(what) {
            overflow<br/> overflow<br/>
         </div>
 
-        <div id="footer"></div> 
-      </div> 
+        <div id="footer"></div>
+      </div>
     </div>
   </div>
 </div>

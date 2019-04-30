@@ -1,4 +1,4 @@
-var photo_data = 
+var photo_data =
 {
   "1":
   {"foto":"waterhoenstraat.png",
@@ -9,13 +9,13 @@ var photo_data =
   "2":
   {"foto":"lesgeven.png",
   "titel":"Een actiefoto tijdens het lesgeven",
-  "beschrijving":"Het werken in het onderwijs is mijn passie. Hier ben ik bezig met een groepsbespreking van een studentenproject aan de Academie Minerva. Bij zo'n project ben ik meer een coach dan een docent – ik vertel niet hoe het zit of zou moeten zijn, maar ben een geïnteresseerde sparring-partner voor de groep (foto Arash Azad)." 
+  "beschrijving":"Het werken in het onderwijs is mijn passie. Hier ben ik bezig met een groepsbespreking van een studentenproject aan de Academie Minerva. Bij zo'n project ben ik meer een coach dan een docent – ik vertel niet hoe het zit of zou moeten zijn, maar ben een geïnteresseerde sparring-partner voor de groep (foto Arash Azad)."
   },
 
   "3":
-  {"foto":"fietsen.png",
-   "titel":"Fietsen in Italië",
-   "beschrijving":"<p>In het eerste weekend van oktober wordt in de Chianti in Italië altijd een klassieke fietstocht gereden: tweehonderd kilometer op fietsen van minstens dertig jaar oud, over (grotendeels) onverharde wegen en met een klassieke sfeer. Hier kom ik net binnen in het kleine dorpje Aciano.</p><p>Ik heb overigens <a href='https://www.bartbarnard.nl/blog/?p=916'>een interessante blog</a> geschreven over mijn ervaringen hier.</p>"
+  {"foto":"fietsen2.png",
+   "titel":"Parijs - Roubaix",
+   "beschrijving":"<p>Afgelopen april fietste ik voor de tweede keer de toer-versie van Parijs-Roubaix. Echt een uitdaging, maar ik heb toch van het begin tot het eind veel plezier gehad. </p>"
   },
 
   "4":
@@ -25,4 +25,3 @@ var photo_data =
   }
 
 }
-
