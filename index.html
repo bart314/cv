@@ -4,109 +4,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="style.css">
 
 <title>Bart Barnard – Curriculum Vitae</title>
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/photo_data.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-   $(document).scroll(function() {
-     $("header").css("background-position","50% " + ($(this).scrollTop() / 2) + "px");
-   });
-
-  $("#overlay, #photo-main, #photo").click(function() {
-     $("#main-container").css({'visibility':'hidden', 'z-index':-9 });
-     $("#photo").attr('src','');
-   });
-
-   $("a.photo").click(function() {
-     console.log('hier');
-     show_image($(this).attr('id'));
-     return false;
-   });
-
-   $("#left, #right").click(function(e) { e.stopPropagation(); });
-});
-
-function show_image(what) {
-    var data = photo_data[what];
-
-    file = 'imgs/' + data.foto;
-    html = '<h2>' +data.titel+'</h2>';
-    $("#photo").attr('src', file);
-    $("#photo-data").html(html);
-
-    $("#comments").html(data.beschrijving);
-    $("#main-container").css({'visibility':'visible', 'z-index':9});
-  }
-
-</script>
-
-
-<style type="text/css">
-  body { font-family:Calibri, Verdana, sans-serif; margin:0; padding:0; }
-
-  div.text { line-height:1.5; color:#333; width:80vw;padding-left:5vw; }
-  div.table { display:table; padding-top:3vh; }
-  div.row { display:table-row; }
-
-  p.cell, img.cell { display:table-cell; vertical-align:top; }
-  span.jaren { font-weight:bold; text-decoration:underline; }
-
-  a { text-decoration:none; color:#f47500; }
-  a:hover { border-bottom:solid 1px #f47500; border-top:solid 1px #f47500; }
-  a.photo:hover { border-bottom:dotted 1px #f47500; border-top:none; }
-
-  header { width:100vw; height:100vh;  background:url('imgs/bart_start.png') no-repeat center center; background-size:cover; background-position:50% 0; text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; margin:0; margin-bottom:2vh; padding:0;top:0; }
-  header div.middle { position:relative; top:50%; transform:translateY(-50%); }
-  footer { text-align:center; }
-  footer > p { text-align:left; padding-left:2vw; font-size:0.7rem; }
-
-
-
-  #social { position:absolute; bottom:3vh; right:3vw; max-height:50px; }
-  img.icon { height:36px; width:36px;  max-height:36px; max-width:36px; }
-  img.left { float:left; padding:10px; }
-
-
-    #main-container { visibility: hidden; z-index:-9; }
-    #overlay { position:fixed; top:0; left:0; height:100vh; width:100vw; background:rgba(0,0,0,.7); text-align:center;  }
-
-    #photo-main { position:fixed; top:0; left:0; width:99vw; height:99vh; display:flex; align-items:center; justify-content:center; }
-    #photo-container { width:90vw; height:90vh; }
-    #photo-data { height:10%; }
-    #photo { height:100%; width:auto; overflow:hidden; cursor:pointer; }
-
-
-    #comments {  height: 70%; max-height:80%; overflow:scroll; margin:4% 0; padding:1%; }
-    #footer { height:30%; font-size:small; font-style:italic;  }
-
-
-
-  @media screen and (orientation:landscape) {
-    header h1 {  margin-left:60vw; font-size:4rem;  color:white; }
-    img.sized-w { width:15vw; padding-left:1vw; }
-    #photo-data > h2 { margin-bottom:0; }
-
-
-    #left { width:70%; height:100%; background:black; float:left; display:flex; align-items:center; overflow:hidden; }
-    #right { width:29%; padding-left:1%; height:100%; max-height:100%; float:left;  background-color:white; }
-  }
-
-  @media screen and (orientation:portrait) {
-    header h1 { font-size:2rem;  color:white; }
-    img.left { width:20vw; }
-    img.sized-w { display:none; }
-    #photo-data { padding-bottom:20%; padding-top:0; margin-top:0; }
-    #left { width:100%; height:50%; background:black; display:flex; align-items:center; overflow:hidden; }
-    #right { width:100%; height:50%; max-height:100%;  background-color:white; overflow:scroll; }
-    footer > img { width:90vw; }
-  }
-
-
-
-</style>
+<script type="text/javascript" src="js/interactive.js"></script>
 </head>
 
 <body>
@@ -114,6 +18,7 @@ function show_image(what) {
   <div class="middle">
     <h1>Bart Barnard</h1>
     <h1>Curriculum Vitae</h1>
+    <p>NL | <a href="index_en.html">EN</a></p>
   </div>
   <div id="social">
     <a href="https://www.bartbarnard.nl/blog/" title="blog"><img src="imgs/blog.png" class="icon" title="Blogs"/></a>
@@ -131,18 +36,18 @@ function show_image(what) {
   Geboortedatum: 27 november 1970<br/>
   Telefoon: 06 2509 3817<br/>
   E-mail: <a href="mailto:b.barnard@pl.hanze.nl">b.barnard@pl.hanze.nl</a><br/>
-  Sites: <a href="https://www.bartbarnard.nl/">bartbarnard.nl</a>, <a href="http://www.mandarin.nl">mandarin.nl</a><br/>
+  Sites: <a href="https://www.bartbarnard.nl/">bartbarnard.nl</a>, <a href="https://www.mandarin.nl">mandarin.nl</a><br/>
   <a href="https://github.com/bart314">Github</a> | <a href="https://www.linkedin.com/in/bbarnard/">LinkedIn</a> <br/>
 </div>
 
 <div class="text">
   <h1>Algemeen</h1>
   <p>Mijn interesse ligt op het snijvlak van techniek, kunst, en filosofie. Vanuit die basis houd ik technologische ontwikkelingen bij, reflecteer ik op de (maatschappelijke) consequenties hiervan, die ik uiteindelijk in de geschiedenis en tradities probeer te duiden. Ik heb een creatieve geest die open staat voor nieuwe inzichten, ideeën of concepten. Ik probeer mezelf continu zowel te verbreden als te verdiepen, vanuit de stelregel dat ik elke dag iets nieuws moet leren.</p>
-<p>Omdat ik een grote passie heb voor kennis en kennisoverdracht <a href="#werk">werk</a> ik sinds tien jaar volledig in het onderwijs. Maar ook daarbuiten <a href="https://www.bartbarnard.nl/blog/?page_id=350">geef ik graag en vaak lezingen en presentaties</a>. Vanuit deze interesse en passie heb ik altijd meerdere projecten lopen waar ik bijna dagelijks aan werk en waarin ik nieuwe methoden en technieken uitprobeer. De werkzaamheden hierin lopen uiteen van het uitproberen van <a href="http://mandarin.nl/trump/">een javascript-library voor het maken van geluid</a>, via het schrijven van <a href="https://www.bartbarnard.nl/blog/?p=792">een complexe stored procedure</a> tot aan <a href="https://www.bartbarnard.nl/blog/?p=599">complexe java-architecturen</a>. Kennisoverdracht hierover doe ik via <a href="https://www.bartbarnard.nl/blog/?page_id=625">lab-reports</a>.</p>
+<p>Omdat ik een grote passie heb voor kennis en kennisoverdracht <a href="#werk">werk</a> ik sinds tien jaar volledig in het onderwijs. Maar ook daarbuiten geef ik graag en vaak lezingen en presentaties. Vanuit deze interesse en passie heb ik altijd meerdere projecten lopen waar ik bijna dagelijks aan werk en waarin ik nieuwe methoden en technieken uitprobeer. De werkzaamheden hierin lopen uiteen van het uitproberen van <a href="http://mandarin.nl/trump/">een javascript-library voor het maken van geluid</a>, via het schrijven van <a href="https://www.bartbarnard.nl/blog/stored-function-in-mijn-reference-manager/">een complexe stored procedure</a> tot aan <a href="https://www.bartbarnard.nl/blog/het-maken-van-de-funda-harvester/">complexe java-architecturen</a>. Kennisoverdracht hierover doe ik via <a href="https://www.bartbarnard.nl/blog/category/techniek/">lab-reports</a>.</p>
 
-<p>Ik heb een sterke mening over hoe de wereld er uit zou moeten zien en welke stappen gezet moeten worden om dat te bereiken. Ik deel dat te pas en te onpas via ingezonden brieven en opiniestukken in <a href="https://www.bartbarnard.nl/blog/?page_id=431">diverse regionale en landelijke dagbladen</a>. Indachtig de uitspraak van <a href="https://en.wikipedia.org/wiki/Friedrich_Wilhelm_Joseph_Schelling">Schelling</a> uit 1802 verlang ik dat niets in het universum teneergedrukt, ingeperkt of ondergeschikt is, en eis ik voor elk ding een bijzonder en vrij bestaan.</p>
+<p>Ik heb een sterke mening over hoe de wereld er uit zou moeten zien en welke stappen gezet moeten worden om dat te bereiken. Ik deel dat te pas en te onpas via ingezonden brieven en opiniestukken in <a href="https://www.bartbarnard.nl/blog/category/opinie/">diverse regionale en landelijke dagbladen</a>. Indachtig de uitspraak van <a href="https://en.wikipedia.org/wiki/Friedrich_Wilhelm_Joseph_Schelling">Schelling</a> uit 1802 verlang ik dat niets in het universum teneergedrukt, ingeperkt of ondergeschikt is, en eis ik voor elk ding een bijzonder en vrij bestaan.</p>
 
-<p>Meer wijsgerige overwegingen <a href="../blog">publiceer ik op mijn blog</a>.</p>
+<p>Meer wijsgerige overwegingen <a href="https://www.bartbarnard.nl/blog/category/filosofie/">publiceer ik op mijn blog</a>.</p>
 
 </div>
 
@@ -208,7 +113,7 @@ function show_image(what) {
 
 <footer>
   <img src="imgs/maya-text.jpg" title="BALATA: 12 baktun, 17 katun, 17 tun,5 uinal, 15 k'in, 5 Men, 8 Keh, G7; Siyaj(a) Nahalahaw K'ahk'in"/>
- <p>laatste wijziging: 4 juli 2021<br/>
+ <p>laatste wijziging: 8 september 2021<br/>
   Bekijk de <a href="https://github.com/bart314/cv">repo op github</a>.</p>
 </footer>
 

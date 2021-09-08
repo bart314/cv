@@ -1,0 +1,59 @@
+  body { font-family:Calibri, Verdana, sans-serif; margin:0; padding:0; }
+
+  div.text { line-height:1.5; color:#333; width:80vw;padding-left:5vw; }
+  div.table { display:table; padding-top:3vh; }
+  div.row { display:table-row; }
+
+  p.cell, img.cell { display:table-cell; vertical-align:top; }
+  span.jaren { font-weight:bold; text-decoration:underline; }
+
+  a { text-decoration:none; color:#f47500; }
+  a:hover { border-bottom:solid 1px #f47500; border-top:solid 1px #f47500; }
+  a.photo:hover { border-bottom:dotted 1px #f47500; border-top:none; }
+
+  header { width:100vw; height:100vh;  background:url('imgs/bart_start.png') no-repeat center center; background-size:cover; background-position:50% 0; text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; margin:0; margin-bottom:2vh; padding:0;top:0; }
+  header div.middle { position:relative; top:50%; transform:translateY(-50%); }
+  header div.middle > p { padding-left:61vw; color:white; }
+  footer { text-align:center; }
+  footer > p { text-align:left; padding-left:2vw; font-size:0.7rem; }
+
+
+
+  #social { position:absolute; bottom:3vh; right:3vw; max-height:50px; }
+  img.icon { height:36px; width:36px;  max-height:36px; max-width:36px; }
+  img.left { float:left; padding:10px; }
+
+
+    #main-container { visibility: hidden; z-index:-9; }
+    #overlay { position:fixed; top:0; left:0; height:100vh; width:100vw; background:rgba(0,0,0,.7); text-align:center;  }
+
+    #photo-main { position:fixed; top:0; left:0; width:99vw; height:99vh; display:flex; align-items:center; justify-content:center; }
+    #photo-container { width:90vw; height:90vh; }
+    #photo-data { height:10%; }
+    #photo { height:100%; width:auto; overflow:hidden; cursor:pointer; }
+
+
+    #comments {  height: 70%; max-height:80%; overflow:scroll; margin:4% 0; padding:1%; }
+    #footer { height:30%; font-size:small; font-style:italic;  }
+
+
+
+  @media screen and (orientation:landscape) {
+    header h1 {  margin-left:60vw; font-size:4rem;  color:white; }
+    img.sized-w { width:15vw; padding-left:1vw; }
+    #photo-data > h2 { margin-bottom:0; }
+
+
+    #left { width:70%; height:100%; background:black; float:left; display:flex; align-items:center; overflow:hidden; }
+    #right { width:29%; padding-left:1%; height:100%; max-height:100%; float:left;  background-color:white; }
+  }
+
+  @media screen and (orientation:portrait) {
+    header h1 { font-size:2rem;  color:white; }
+    img.left { width:20vw; }
+    img.sized-w { display:none; }
+    #photo-data { padding-bottom:20%; padding-top:0; margin-top:0; }
+    #left { width:100%; height:50%; background:black; display:flex; align-items:center; overflow:hidden; }
+    #right { width:100%; height:50%; max-height:100%;  background-color:white; overflow:scroll; }
+    footer > img { width:90vw; }
+  }
